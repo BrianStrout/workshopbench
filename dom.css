@@ -1,4 +1,4 @@
-body{
+    body{
     --color-primary:#009579;
     --color-primary-dark:#007f67;
     --color-secondary:#252c6a;
@@ -19,6 +19,7 @@ body{
 .container{
     width: 400px;
     max-width: 400px;
+    /* 1rem here is equal to the font size of 18px */
     margin: 1rem;
     padding: 2rem;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
@@ -30,9 +31,14 @@ body{
 .form__button{
     font: 500 1rem 'Quicksand', sans-serif;
 }
+/* Establishes the class of hidden so only one form shows at once */
 .form--hidden{
     display: none;
 }
+/* What we are doing here is take the top margin of the child and the bottom margin of the bottom child and 
+removing them so they don't clash with the container margin. I'm not sure as to why this is exactly as I
+thought margins collapsed */
+
 .form > *:first-child{
     margin-top: 0;
 }
@@ -62,7 +68,8 @@ body{
 .form__input-group{
     margin-bottom: 1rem;
 }
-
+/* The transition below will be relevant to when javascript determines something is an error and put it in 
+error mode */
 .form__input{
     display: block;
     width: 100%;
@@ -104,6 +111,7 @@ body{
 .form__button:hover{
     background-color: var(--color-primary-dark);
 }
+/* this is for when button clicked */
 .form__button:active{
     transform: scale(0.98);
 }
@@ -117,6 +125,7 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+/* This is a nice touch */
 .form__link:hover{
     text-decoration: underline;
 }
