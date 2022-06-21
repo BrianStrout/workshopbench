@@ -9,9 +9,17 @@
     <script src="dom.js"></script>
 </head>
 <body>
+    <!-- We creat a general container that serves a s the outline for the box in which the forms live.
+    It is styled to 400px with a max width of 400px. -->
     <div class="container">
+
+
+<!-- We made the sign in form first, the id is crucial in this so we can change the class of hidden and 
+target specific form entry fields -->
+
         <form class="form" id="login">
             <h1 class="form__title">login</h1>
+<!-- We made a div with nothing in it to pop up via javascript when there is an error after submission -->
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
                 <input type="text" class="form__input" autofocus placeholder="Username or Email">
@@ -23,29 +31,34 @@
             </div>
             <button class="form__button" type="submit">Continue</button>
             <p class="form__text">
+<!-- We made sure to nullify default behavior of these links, so that they would present as
+ links but not actually leave the page -->
                 <a href="#"  class="form__link">Forgot Your Password?</a>
             </p>
             <p class="form__text">
                 <a  class="form__link"  id="linkCreateAccount">Don't have an account? Create account</a>
             </p>
         </form>
+<!-- Here we start the create account form, observe that is has the class of both form and form hidden         -->
         <form class="form form--hidden" id="createAccount">
             <h1 class="form__title">Create Account</h1>
             <div class="form__message form__message--error"></div>
             <div class="form__input-group">
+<!-- We have applied an autofocus attribute to the username field so that the user's cursor will start there -->
                 <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
                 <div class="form__input-error-message"></div>
             </div>
+            <!-- sidenote:atuofocus was on all of them I think this was a mistake -->
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Email">
+                <input type="text" class="form__input"  placeholder="Email">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Password">
+                <input type="text" class="form__input" placeholder="Password">
                 <div class="form__input-error-message"></div>
             </div>
             <div class="form__input-group">
-                <input type="text" class="form__input" autofocus placeholder="Confirm Password">
+                <input type="text" class="form__input"  placeholder="Confirm Password">
                 <div class="form__input-error-message"></div>
             </div>
             
