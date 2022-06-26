@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: rgb(238, 199, 210);
+    display: flex;
+    justify-content: center;
+    
+}
+.box{
+    background-color: black;
+    height: 400px;
+    width: 400px;
+    margin-top: 40px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+}
+.gearBox{
+    margin-top: 100px;
+    /* background-color: aqua; */
+    width: 200px;
+    height: 200px;
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotatecc {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to { 
+    -webkit-transform: rotate(-360deg);
+  }
+}
+#spin1,
+#spin3{
+
+    -webkit-animation-name:             rotate; 
+    -webkit-animation-duration:         2s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+}
+#spin2
+{
+    transform: translateX(100%);
+    -webkit-animation-name:             rotatecc; 
+    -webkit-animation-duration:         2s; 
+    -webkit-animation-iteration-count:  infinite;
+    -webkit-animation-timing-function: linear;
+   
+}
+    </style>
+</head>
+<body>
+<div class="box">
+<div class="gearBox">
+    <svg id="spin1" width="180" height="200" viewBox="0 0 36 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 2C16 0.895431 16.8954 0 18 0C19.1046 0 20 0.895431 20 2V38C20 39.1046 19.1046 40 18 40C16.8954 40 16 39.1046 16 38V2Z" fill="#D9D9D9"/>
+        <path d="M1.41154 12.7321C0.454958 12.1798 0.127207 10.9566 0.679492 10C1.23178 9.04342 2.45496 8.71567 3.41154 9.26795L34.5885 27.268C35.545 27.8202 35.8728 29.0434 35.3205 30C34.7682 30.9566 33.545 31.2843 32.5885 30.7321L1.41154 12.7321Z" fill="#D9D9D9"/>
+        <path d="M32.5041 8.9603C33.4607 8.40801 34.6838 8.73576 35.2361 9.69235C35.7884 10.6489 35.4607 11.8721 34.5041 12.4244L3.32716 30.4244C2.37057 30.9767 1.14739 30.6489 0.595106 29.6923C0.0428216 28.7358 0.370572 27.5126 1.32716 26.9603L32.5041 8.9603Z" fill="#D9D9D9"/>
+        </svg>
+
+
+        <svg id="spin2" width="150" height="170" viewBox="0 0 30 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3222 1.7C13.3222 0.761116 14.0833 0 15.0222 0C15.9611 0 16.7222 0.761116 16.7222 1.7V32.3C16.7222 33.2389 15.9611 34 15.0222 34C14.0833 34 13.3222 33.2389 13.3222 32.3V1.7Z" fill="#D9D9D9"/>
+            <path d="M0.922012 10.8222C0.108915 10.3528 -0.169673 9.3131 0.299769 8.5C0.769211 7.68691 1.80891 7.40832 2.62201 7.87776L29.1224 23.1778C29.9355 23.6472 30.2141 24.6869 29.7446 25.5C29.2752 26.3131 28.2355 26.5917 27.4224 26.1222L0.922012 10.8222Z" fill="#D9D9D9"/>
+            <path d="M27.3507 7.61625C28.1638 7.14681 29.2035 7.4254 29.6729 8.2385C30.1423 9.05159 29.8638 10.0913 29.0507 10.5607L2.55028 25.8607C1.73719 26.3302 0.697483 26.0516 0.228041 25.2385C-0.241401 24.4254 0.0371864 23.3857 0.850284 22.9163L14.1005 15.2663L27.3507 7.61625Z" fill="#D9D9D9"/>
+            </svg>
+            
+        <svg id="spin3" width="90" height="105" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8.00061 1.60234C8.00061 1.03849 8.45769 0.581406 9.02154 0.581406C9.58538 0.581406 10.0425 1.03849 10.0425 1.60234V19.9791C10.0425 20.5429 9.58538 21 9.02154 21C8.45769 21 8.00061 20.5429 8.00061 19.9791V1.60234Z" fill="#D9D9D9"/>
+            <path d="M0.553712 7.08067C0.0654084 6.79875 -0.101897 6.17436 0.180025 5.68606C0.461947 5.19775 1.08634 5.03045 1.57464 5.31237L17.4894 14.5007C17.9777 14.7827 18.145 15.4071 17.8631 15.8954C17.5811 16.3837 16.9567 16.551 16.4684 16.269L0.553712 7.08067Z" fill="#D9D9D9"/>
+            <path d="M16.4254 5.15532C16.9137 4.8734 17.5381 5.04071 17.82 5.52901C18.1019 6.01731 17.9346 6.6417 17.4463 6.92363L1.53157 16.112C1.04326 16.3939 0.418871 16.2266 0.136949 15.7383C-0.144973 15.25 0.0223322 14.6256 0.510636 14.3437L8.468 9.74951L16.4254 5.15532Z" fill="#D9D9D9"/>
+            </svg>
+        </div>
+        </div>
+    
+</body>
+</html>
